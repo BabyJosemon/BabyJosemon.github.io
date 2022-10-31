@@ -3,7 +3,23 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+function switchTheme(e) {
+    if (e.target.checked) {
+        var elmWitchChange = document.getElementsByClassName('light')
+                    for (var i = 0; i < elmWitchChange.length; i++) {
+                        elmWitchChange[i].classList.toggle('dark')
+                    }
+    }
+    else {
+    var elmWitchChange = document.getElementsByClassName('light')
+                        for (var i = 0; i < elmWitchChange.length; i++) {
+                            elmWitchChange[i].classList.toggle('dark')
+                        }
 
+    }
+}
+toggleSwitch.addEventListener('change', switchTheme, false);
 (function($) {
 
 	var $window = $(window),
